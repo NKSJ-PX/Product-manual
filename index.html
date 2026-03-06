@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>说明书门户</title>
+  <title>Product Manual Portal | U.S. Support</title>
   <style>
     :root {
-      --bg-1: #f6f8fb;
-      --bg-2: #eef3ff;
+      --navy: #0b1f3a;
+      --red: #b22234;
+      --white: #ffffff;
+      --ink: #152238;
+      --muted: #4e5d73;
+      --line: #d7dfeb;
       --card: #ffffff;
-      --text: #1f2937;
-      --subtext: #5b6475;
-      --link: #0a58ca;
-      --link-hover: #063b8c;
-      --border: #d9e1ee;
-      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --hero-start: #0c2348;
+      --hero-end: #163968;
+      --shadow: 0 14px 34px rgba(11, 31, 58, 0.16);
     }
 
     * {
@@ -23,9 +24,10 @@
 
     body {
       margin: 0;
-      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at 0 0, var(--bg-2), var(--bg-1) 60%);
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, #f2f6fb 0%, #ecf2f9 100%);
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -34,26 +36,64 @@
     }
 
     .portal {
-      width: min(920px, 100%);
-      background: var(--card);
-      border: 1px solid var(--border);
+      width: min(980px, 100%);
       border-radius: 16px;
+      overflow: hidden;
       box-shadow: var(--shadow);
-      padding: 28px;
+      border: 1px solid #cad5e7;
+      background: var(--card);
+    }
+
+    .hero {
+      color: var(--white);
+      background: linear-gradient(135deg, var(--hero-start), var(--hero-end));
+      padding: 30px 28px 24px;
+      border-bottom: 4px solid var(--red);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      padding: 6px 10px;
+      margin-bottom: 12px;
     }
 
     h1 {
       margin: 0 0 8px;
-      font-size: 28px;
-      line-height: 1.2;
+      font-size: 30px;
+      line-height: 1.18;
+      letter-spacing: 0.01em;
     }
 
-    p {
-      margin: 0 0 24px;
-      color: var(--subtext);
+    .hero p {
+      margin: 0;
+      max-width: 70ch;
+      color: #d8e5ff;
+      line-height: 1.5;
     }
 
-    ul {
+    .content {
+      padding: 24px 28px 28px;
+    }
+
+    .section-title {
+      margin: 0 0 6px;
+      font-size: 20px;
+    }
+
+    .section-subtitle {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .manual-list {
       list-style: none;
       margin: 0;
       padding: 0;
@@ -61,57 +101,97 @@
       gap: 12px;
     }
 
-    a {
+    .manual-link {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 16px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
+      gap: 10px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--navy);
+      border-radius: 12px;
       text-decoration: none;
-      color: var(--link);
+      color: var(--navy);
       font-weight: 600;
-      background: #fbfcff;
-      transition: border-color 0.2s ease, transform 0.2s ease;
+      background: #fbfdff;
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    a:hover {
-      border-color: #b6c6e7;
-      color: var(--link-hover);
-      transform: translateY(-1px);
+    .manual-link:hover {
+      border-color: #a8bbd8;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(11, 31, 58, 0.1);
     }
 
-    .arrow {
+    .manual-meta {
+      color: var(--muted);
       font-size: 14px;
+      font-weight: 500;
+    }
+
+    .cta {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--muted);
+      border-top: 1px dashed var(--line);
+      padding-top: 14px;
+      line-height: 1.6;
+    }
+
+    .open-tag {
+      color: var(--red);
+      font-weight: 700;
+      font-size: 14px;
+      white-space: nowrap;
     }
 
     @media (max-width: 640px) {
-      .portal {
-        padding: 20px;
+      .hero {
+        padding: 22px 18px 18px;
       }
 
       h1 {
         font-size: 24px;
       }
 
-      a {
+      .content {
+        padding: 18px;
+      }
+
+      .manual-link {
         font-size: 15px;
+        align-items: flex-start;
+      }
+
+      .open-tag {
+        font-size: 13px;
       }
     }
   </style>
 </head>
 <body>
   <main class="portal">
-    <h1>产品说明书门户</h1>
-    <p>点击下方链接可在浏览器中直接查看 PDF 说明书。</p>
-    <ul>
-      <li>
-        <a href="./pdfs/Prizmox_B221H00_Quick_User_Guide.pdf" target="_blank" rel="noopener noreferrer">
-          Prizmox B221H00 Quick User Guide
-          <span class="arrow">打开 PDF</span>
-        </a>
-      </li>
-    </ul>
+    <section class="hero">
+      <span class="eyebrow">U.S. Product Support</span>
+      <h1>Product Manual Portal</h1>
+      <p>Access official quick guides and manuals for products sold in the United States. Documents open directly in your browser as PDF files.</p>
+    </section>
+    <section class="content">
+      <h2 class="section-title">Available Manuals</h2>
+      <p class="section-subtitle">Select a document below to view it instantly.</p>
+      <ul class="manual-list">
+        <li>
+          <a class="manual-link" href="./pdfs/Prizmox_B221H00_Quick_User_Guide.pdf" target="_blank" rel="noopener noreferrer">
+            <span>
+              Prizmox B221H00 Quick User Guide
+              <span class="manual-meta">PDF Document</span>
+            </span>
+            <span class="open-tag">Open PDF</span>
+          </a>
+        </li>
+      </ul>
+      <p class="cta">Tip: Bookmark this page for fast customer support access and easy sharing with U.S. sales teams.</p>
+    </section>
   </main>
 </body>
 </html>
