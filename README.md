@@ -7,10 +7,17 @@ Static manual portal for U.S. ecommerce sales and post-purchase support.
 - Home: `https://nksj-px.github.io/Product-manual/`
 - Manual PDF: `https://nksj-px.github.io/Product-manual/pdfs/Prizmox_B221H00_Quick_User_Guide.pdf`
 
+## Brand and Contact
+
+- Brand logo file: `brand-logo.png`
+- Customer support email: `Prizmoxcs@outlook.com`
+- Amazon store: `https://www.amazon.com/s?me=A134988YS0XGQ4&marketplaceID=A2EUQ1WTGCTBG2`
+
 ## Repository Structure
 
 ```text
 Product-manual/
+├─ brand-logo.png
 ├─ index.html
 ├─ pdfs/
 │  └─ Prizmox_B221H00_Quick_User_Guide.pdf
@@ -30,4 +37,3 @@ Product-manual/
 1. Put new PDF files in `pdfs/`.
 2. Add corresponding links in `index.html`.
 3. Commit and push to `main`.
-

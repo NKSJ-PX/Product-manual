@@ -75,6 +75,34 @@
       margin-bottom: 14px;
     }
 
+    .brand {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #fff;
+      padding: 4px;
+    }
+
+    .brand-name {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
     h1 {
       margin: 0 0 10px;
       font-size: 34px;
@@ -117,6 +145,10 @@
       background: transparent;
       color: #fff;
       border-color: rgba(255, 255, 255, 0.45);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
     }
 
     .content {
@@ -220,6 +252,16 @@
       line-height: 1.6;
     }
 
+    .support-link {
+      color: var(--blue);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .support-link:hover {
+      text-decoration: underline;
+    }
+
     .cta-line {
       margin-top: 18px;
       font-size: 14px;
@@ -265,12 +307,17 @@
 <body>
   <main class="portal">
     <section class="hero">
+      <div class="brand">
+        <img src="./brand-logo.png" alt="Prizmox logo" />
+        <span class="brand-name">Prizmox</span>
+      </div>
       <span class="pill">U.S. STORE READY</span>
       <h1>Manuals That Match Your U.S. Customer Journey</h1>
       <p>Share official product guides instantly with your buyers. Every file opens directly in browser for faster post-purchase support and fewer service tickets.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="./pdfs/Prizmox_B221H00_Quick_User_Guide.pdf" target="_blank" rel="noopener noreferrer">View Best-Selling Manual</a>
         <a class="btn btn-secondary" href="#support">Warranty & Support</a>
+        <a class="btn btn-secondary" href="https://www.amazon.com/s?me=A134988YS0XGQ4&marketplaceID=A2EUQ1WTGCTBG2" target="_blank" rel="noopener noreferrer">Visit Amazon Store</a>
       </div>
     </section>
     <section class="content">
@@ -298,7 +345,14 @@
         </article>
         <article class="support-card">
           <h3>Support Channel</h3>
-          <p>For replacement, setup, or troubleshooting, direct customers to your U.S. support mailbox or ticket portal and include the product model in requests.</p>
+          <p>
+            Customer Service Email:
+            <a class="support-link" href="mailto:Prizmoxcs@outlook.com">Prizmoxcs@outlook.com</a>
+          </p>
+          <p>
+            Amazon Store:
+            <a class="support-link" href="https://www.amazon.com/s?me=A134988YS0XGQ4&marketplaceID=A2EUQ1WTGCTBG2" target="_blank" rel="noopener noreferrer">Prizmox Official Storefront</a>
+          </p>
         </article>
       </div>
       <p class="cta-line">Sales tip: Place the PDF direct link on your storefront confirmation page to improve customer confidence and reduce returns.</p>
