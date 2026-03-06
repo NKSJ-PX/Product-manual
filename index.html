@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>说明书门户</title>
+  <style>
+    :root {
+      --bg-1: #f6f8fb;
+      --bg-2: #eef3ff;
+      --card: #ffffff;
+      --text: #1f2937;
+      --subtext: #5b6475;
+      --link: #0a58ca;
+      --link-hover: #063b8c;
+      --border: #d9e1ee;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 0 0, var(--bg-2), var(--bg-1) 60%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .portal {
+      width: min(920px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0 0 24px;
+      color: var(--subtext);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--link);
+      font-weight: 600;
+      background: #fbfcff;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    a:hover {
+      border-color: #b6c6e7;
+      color: var(--link-hover);
+      transform: translateY(-1px);
+    }
+
+    .arrow {
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .portal {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      a {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="portal">
+    <h1>产品说明书门户</h1>
+    <p>点击下方链接可在浏览器中直接查看 PDF 说明书。</p>
+    <ul>
+      <li>
+        <a href="./pdfs/Prizmox_B221H00_Quick_User_Guide.pdf" target="_blank" rel="noopener noreferrer">
+          Prizmox B221H00 Quick User Guide
+          <span class="arrow">打开 PDF</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
